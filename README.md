@@ -13,4 +13,5 @@ Languages I've used for the very first time this month (descending order of pref
 - Elixir 
 - Go
 - Julia
+- Kotlin
 - Java
