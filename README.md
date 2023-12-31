@@ -22,10 +22,16 @@ Puzzles I've found particularly challenging (descending order):
 
 Languages I've used for the very first time this month:
 
-```
-Ruby Lisp OCaml Elixir Go Julia Kotlin C# Java
-```
+- Ruby 
+- Lisp
+- Go
+- OCaml
+- Elixir
+- Julia
+- Kotlin
+- C#
+- Java
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/dougy147/aoc2023/master/ranks.png" width="80%" />
+<img src="https://raw.githubusercontent.com/dougy147/aoc2023/master/ranks.png" width="60%" />
 </p>
