@@ -26,8 +26,10 @@ Languages I've used for the very first time this month:
 - Lisp
 - Go
 - OCaml
+- Lua
 - Elixir
 - Julia
+- Clojure
 - Kotlin
 - C#
 - Java
