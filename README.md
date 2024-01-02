@@ -34,6 +34,7 @@ Languages I've used for the very first time this month:
 - Kotlin
 - C#
 - Java
+- Boo
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/dougy147/aoc2023/master/ranks.png" width="60%" />
