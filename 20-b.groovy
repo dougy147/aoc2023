@@ -247,10 +247,11 @@ void push(currentOutput) {
     todo = toProcessNext.pop()
     todo.send()
     for (o in todo.outputs) {
-      for (neededInput in depenciesInputs[currentOutput]) {
+      for (neededInput in dependenciesInputs[currentOutput]) {
 	if (todo.label == neededInput && todo.toSendNext == 1 && o.label == currentOutput) {
 	  if (! cycling.containsKey(neededInput)) {
 	    cycling[neededInput] = iterations
+	    cycled += 1
 	  }
 	}
       }
@@ -279,19 +280,19 @@ modules = []
 for (k in flipflops.keySet())    { for (output in flipflops[k])    { if (output.label == "rx") { modules.add(k) } } }
 for (k in conjunctions.keySet()) { for (output in conjunctions[k]) { if (output.label == "rx") { modules.add(k) } } }
 
-depenciesInputs = [:]
-nbInputsNeeded = 0
+dependenciesInputs = [:]
 for (m in modules) {
-  depenciesInputs[m] = []
-  for (k in flipflops.keySet())    { for (input in flipflops[k])    { if (input.label == m) { depenciesInputs[m].add(k); nbInputsNeeded+=1 } } }
-  for (k in conjunctions.keySet()) { for (input in conjunctions[k]) { if (input.label == m) { depenciesInputs[m].add(k); nbInputsNeeded+=1 } } }
+  dependenciesInputs[m] = []
+  for (k in flipflops.keySet())    { for (input in flipflops[k])    { if (input.label == m) { dependenciesInputs[m].add(k) } } }
+  for (k in conjunctions.keySet()) { for (input in conjunctions[k]) { if (input.label == m) { dependenciesInputs[m].add(k) } } }
 } // Fortunately, there's only one dependency for 'rx' and it is a Conjunction ('gf')
 
 cycling = [:]
 
-for (k in depenciesInputs.keySet()) {
+for (k in dependenciesInputs.keySet()) {
   iterations = 1
-  while (cycling.size() != nbInputsNeeded) {
+  cycled = 0
+  while (cycled != dependenciesInputs[k].size()) {
     push(k)
     iterations += 1
   }
