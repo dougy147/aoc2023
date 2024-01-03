@@ -28,13 +28,14 @@ Languages I've used for the very first time this month:
 - OCaml
 - Lua
 - Elixir
+- TypeScript
 - Julia
 - Clojure
+- Boo
 - Groovy
 - Kotlin
 - C#
 - Java
-- Boo
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/dougy147/aoc2023/master/ranks.png" width="60%" />
