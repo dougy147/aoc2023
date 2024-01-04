@@ -30,6 +30,7 @@ Languages I've used for the very first time this month:
 - Elixir
 - TypeScript
 - Julia
+- Scala
 - Clojure
 - Boo
 - Groovy
